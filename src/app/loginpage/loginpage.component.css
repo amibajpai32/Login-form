@@ -1,0 +1,97 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Container */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f3e6ff; /* Light purple background */
+}
+
+/* Screen */
+.screen {
+    background: #fff;
+    width: 360px;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+/* Screen Content */
+.screen_content {
+    position: relative;
+    z-index: 1;
+}
+
+/* Login Form */
+.login {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Login Fields */
+.login_field {
+    position: relative;
+}
+
+.login_icon {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    color: #a280ff; /* Purple icon color */
+}
+
+.login_input {
+    width: 100%;
+    padding: 15px 15px 15px 45px;
+    background: #f0eaff;
+    border: 2px solid #d1b3ff;
+    border-radius: 30px;
+    font-size: 16px;
+    color: #5a3b99;
+    outline: none;
+}
+
+.login_input::placeholder {
+    color: #b3a1e6;
+}
+
+/* Login Button */
+.login_submit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #a280ff;
+    color: white;
+    padding: 15px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background 0.3s;
+    position: relative;
+}
+
+.login_submit:hover {
+    background: #7a4fff;
+}
+
+.button_icon {
+    margin-left: 10px;
+}
+H1 {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 10px;  /* Reduce this value to bring it closer to the form */
+    margin-top: -20px;    /* Adjust this value to move it upwards */
+    color: #333;
+  }
+  

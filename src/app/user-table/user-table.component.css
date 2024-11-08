@@ -1,0 +1,42 @@
+h2{
+    text-align: center;
+}
+button {
+    width: 100%;                /* Full width button */
+    padding: 10px;              /* Increase padding for a bigger button */
+    font-size: 1.2rem;          /* Increase font size */
+              
+    color: #fff;                /* White text color */
+    background-color: #4CAF50;  /* Customize background color */
+    border: none;               /* Remove default border */
+    border-radius: 12px;        /* Rounded corners */
+    cursor: pointer;            /* Pointer cursor on hover */
+    transition: background-color 0.3s ease;  /* Smooth transition for hover effect */
+  }
+  
+  button:hover {
+    background-color: #45a049;  /* Darker shade on hover */
+  }
+  button.save {
+    background-color: #4CAF50; /* Green for Save */
+    color: #fff;
+    margin-bottom: 5px; /* Adds space on the right side */
+  }
+  
+  button.delete {
+    background-color: #f44336; /* Red for Delete */
+    color: #fff;
+    margin-bottom: 5px;
+
+  }
+  button.add-user {
+    width: auto; /* Adjusts to standard button size */
+    margin: 20px auto; /* Centers the button horizontally */
+    display: block; /* Required for centering with margin auto */
+    background-color: #4CAF50; /* Optional: green background for visibility */
+    color: white;
+  }
+  button.Cancel {
+    background-color: #B2BEB5; /* Red for Delete */
+    color: #fff;;
+  }

@@ -1,0 +1,64 @@
+<div>
+  <h2>User Table</h2>
+  <table border="1" align="center">
+    <tr>
+      <th>Username</th>
+      <th>Password</th>
+      <th>Name</th>
+      <th>Mobile</th>
+      <th>Email</th>
+      <th>Father's Name</th>
+      <th>Address</th>
+      <th>Gender</th>
+
+    </tr>
+    <tr *ngFor="let user of users;">
+      <td>{{ user.username }}</td>
+      <td>
+        <input *ngIf="isEditing === user.username" [(ngModel)]="user.password" type="password" />
+        <span *ngIf="isEditing !== user.username">******</span>
+      <td>
+        <input *ngIf="isEditing === user.username" [(ngModel)]="user.name" />
+        <span *ngIf="isEditing !== user.username">{{ user.name }}</span>
+      </td>
+      <td>
+        <input *ngIf="isEditing === user.username" [(ngModel)]="user.mobile" />
+        <span *ngIf="isEditing !== user.username">{{ user.mobile }}</span>
+      </td>
+      <td>
+        <input *ngIf="isEditing === user.username" [(ngModel)]="user.email" />
+        <span *ngIf="isEditing !== user.username">{{ user.email }}</span>
+      </td>
+      <td>
+        <input *ngIf="isEditing === user.username" [(ngModel)]="user.fname" />
+        <span *ngIf="isEditing !== user.username">{{ user.fname }}</span>
+      </td>
+      <td>
+        <input *ngIf="isEditing === user.username" [(ngModel)]="user.address" />
+        <span *ngIf="isEditing !== user.username">{{ user.address }}</span>
+      </td>
+      <td>
+        <div *ngIf="isEditing === user.username">
+          <label>
+            <input type="radio" [(ngModel)]="user.gender" value="Male" /> Male
+          </label>
+          <label>
+            <input type="radio" [(ngModel)]="user.gender" value="Female" /> Female
+          </label>
+        </div>
+        <span *ngIf="isEditing !== user.username">{{ user.gender }}</span>
+      </td>
+      <button *ngIf="isEditing !== user.username" (click)="onEdit(user.username)">Edit</button>
+      <button *ngIf="isEditing === user.username" (click)="onSave(user)" class="save">Save</button>
+      <button *ngIf="isEditing === user.username" (click)="onDelete(user.username)" class="delete">Delete</button>
+      <button *ngIf="isEditing === user.username" class="Cancel" (click)="onCancel(user.username)">Cancel</button>
+      <button *ngIf="isEditing === user.username" class="Cancel" (click)="onLogout()">Cancel</button>
+
+
+
+
+    </tr>
+  </table>
+  <button class="add-user" (click)="goToAddUser()">Add New User</button>
+
+</div>

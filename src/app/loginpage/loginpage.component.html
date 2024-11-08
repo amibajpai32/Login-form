@@ -1,0 +1,37 @@
+<div class="container">
+    
+    <div class="screen">
+        <H1>Login Form</H1>
+        <div class="screen_content">
+            
+            <form class="login">
+                
+                <div class="login_field">
+                    <i class="login_icon fas fa-user"></i>
+                    <input type="text" [(ngModel)]="loginobj.username" [ngModelOptions]="{standalone: true}" placeholder="Username">
+
+                </div>
+                <div class="login_field">
+                    <i class="login_icon fas fa-lock"></i>
+                    <input type="password" [(ngModel)]="loginobj.Password" [ngModelOptions]="{standalone: true}" placeholder="Password">
+                </div>
+                <div class="button login_submit">
+                    <span class="button_text" (click)="onLogin()" >Log In Now</span>
+                    <i class="button_icon fas fa-chevron-right"></i>
+                   
+                </div>
+                <div class="register_link">
+                    <span>New user? <a (click)="navigateToregistration()">Register</a></span>
+                  </div>
+            </form>
+            <div class="screen_background">
+                <span class="screen_background_shapescreen_background_shape4"></span>
+                <span class="screen_background_shapescreen_background_shape3"></span>
+                <span class="screen_background_shapescreen_background_shape2"></span>
+                <span class="screen_background_shapescreen_background_shape1"></span>
+              </div>
+            
+            </div>
+        </div>
+    </div>
+      
